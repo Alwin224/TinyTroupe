@@ -6,6 +6,7 @@ agents interact with each other as well as external entities (e.g., search engin
 import logging
 logger = logging.getLogger("tinytroupe")
 import copy
+import random
 from datetime import datetime, timedelta
 
 from tinytroupe.agent import *
@@ -671,6 +672,18 @@ class TinyWorld:
         Clears the list of all environments.
         """
         TinyWorld.all_environments = {}
+
+    def update_environment_weather(self):
+        """
+        Implementation that brings the weather into
+        the environment of the TinyTroupe. This will
+        affect the way the TinyTroup sees and is affected
+        by the world.
+        """
+        weatherconditions = ["sunny", "cloudy", "snowy", "windy", "rainy", "foggy"]
+        currentweather = random.choice(weatherconditions)
+
+        return currentweather
 
 class TinySocialNetwork(TinyWorld):
 

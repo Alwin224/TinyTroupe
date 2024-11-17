@@ -294,3 +294,35 @@ def create_lila_the_linguist():
   
   return lila
 
+
+#Example 5: Daisy Meadows, the Farmer
+
+def create_daisymeadows_the_farmer():
+  daisymeadows = TinyPerson("Daisy Meadows")
+
+
+  daisymeadows.define("age", "24")
+  daisymeadows.define("nationality", "Canadian")
+  daisymeadows.define("country_of_residence", "United States of America")
+  daisymeadows.define("occupation", "Farmer")
+
+  daisymeadows.define_several("routines", 
+  [
+    {"routine" : "You wake up and drink coffee while watching the sunrise"} ,
+    {"routine" : "You get ready and gather the sheep"},
+    {"routine" : "You collect the fresh eggs from the hens"},
+    {"routine" : "You make sure the plants are growing correctly and spray if you need to"},
+    {"routine" : "You cook throughout the day"}
+  ])
+
+  daisymeadows.define("occupation_description" , 
+                      """ 
+                      Daisy Meadows is a farmer who is working on building a successful crop processing.
+                      She farms a plethora of crops and is hoping to use her data modelling process to
+                      model her crop to see if it will do well. She will see how the current weather affects
+                      her virtual crop environment to then use that data and grow an actual plot of land.
+                      wheat.
+
+                      """)
+  
+  return daisymeadows
